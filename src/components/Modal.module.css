@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0 0 0 / 40%);
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  padding: 2rem;
+  border: none;
+  background-color: white;
+  border-radius: 16px;
+  position: absolute;
+  z-index: 10;
+  animation: slideDown 0.5s ease-in-out;
+  animation-fill-mode: both; /* This ensures the final state of the animation persists */
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal h1,
+.modal h2 {
+  color: #19853f;
+  white-space: pre;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.modal h1 {
+  margin-bottom: 1rem;
+}
